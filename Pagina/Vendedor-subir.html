@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-vendedor-publicar.css">
+    <title></title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="ar_menu">
+            <a href="index.html" class="contenedor-logo">
+                <img src="img/Logo_alora.png" alt="Logo de alora" class="logo-alora">
+            </a>
+            <a href="">
+                <button class="botonestilo01">Publicar</button>
+            </a>
+            <a href="">
+                <button class="botonestilo02">Publicaciones</button>
+            </a>
+        </div>
+        <div class="ab_menu">
+            <a href="">
+                <button class="botonestilo02">Salir</button>
+            </a>
+        </div>
+    </nav>
+    <div class="subir-producto">
+        <form id="product-form" enctype="multipart/form-data" class="form-product">
+            <div>
+                <h1>Publicar</h1>
+            </div>
+            <div class="form-group">
+                <label>Subir imágenes:</label>
+                <div id="image-upload-container">
+                    <div class="image-upload-box">
+                        <input type="file" name="product-images[]" accept="image/*" required>
+                    </div>
+                    <div class="image-upload-box">
+                        <input type="file" name="product-images[]" accept="image/*" required>
+                    </div>
+                    <div class="image-upload-box">
+                        <input type="file" name="product-images[]" accept="image/*" required>
+                    </div>
+                    <div class="image-upload-box">
+                        <input type="file" name="product-images[]" accept="image/*" required>
+                    </div>
+                    <div class="image-upload-box">
+                        <input type="file" name="product-images[]" accept="image/*" required>
+                    </div>
+                </div>
+                <p>Puedes subir hasta 5 imágenes.</p>
+            </div>
+            <div class="form-group">
+                <label for="product-name">Nombre del producto:</label>
+                <input type="text" id="product-name" class="diseño-espacio" name="product-name" required>
+            </div>
+            <div class="form-group">
+                <label for="product-price">Precio:</label>
+                <input type="number" id="product-price" class="diseño-espacio" name="product-price" required>
+            </div>
+            <div class="form-group">
+                <label for="product-description">Descripción:</label>
+                <textarea id="product-description" class="diseño-espacio" name="product-description" rows="4" required></textarea>
+            </div>
+            <button type="submit" id="publish-button" class="botonestilo01">Publicar</button>
+        </form>
+    </div>
+    <div id="publishing-overlay" class="overlay">
+        <div class="overlay-content">
+            <p>Publicando el producto...</p>
+        </div>
+    </div>
+    <script src="js/main-Vendedor-subir.js"></script>
+</body>

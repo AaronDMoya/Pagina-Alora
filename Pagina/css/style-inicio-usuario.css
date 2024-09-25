@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f00000;
+}
+
+/*esto cambia todos los texto a la fuente Russo One*/
+h1, h2, h3, h4, h5, h6, p, button, input, textarea, a, span{
+    font-family: 'Russo One', sans-serif;
+}
+
+/*apartado superior donde se encuentra el logo,categoria,buscador,etc*/
+.nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    padding: 0 20px;
+}
+
+/*cosas de la izquierda logo, categorias y buscador*/
+.iz_menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    flex: 1;
+}
+
+.contenedor-logo{
+    display: flex;
+    width: auto;
+    height: 100%;
+}
+
+/*ajustes de tamaño del logo*/
+.logo {
+    height: auto;
+    width: auto;
+}
+
+/*diseño de botones*/
+.botonestilo1{
+    display: flex;
+    height: 60%;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    background: #FFFF;
+    align-items: center;
+    font-size: 16px;
+}
+
+.botonestilo1:hover{
+    background: #F4F4F4;
+}
+
+.botonestilo1.activo{
+    background: #9747FF;
+    color: #ffffff;
+}
+
+/*apartado de busqueda*/
+.buscador_productos{
+    display: flex;
+    height: 60%;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    background: #9747FF;
+    align-items: center;
+}
+
+/*esto oculta diversas cosas*/
+:root {
+    --buscador-ocultar: none;
+}
+
+.espacio_buscador, .linea_vertical_buscador, .equis {
+    display: var(--buscador-ocultar);
+}
+
+.forma_buscador {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.4em;
+}
+
+/*esto elimina los configuraciones que vienen como determinado de los botones*/
+.buscador, .equis, .espacio_buscador, .botonestilo1, .boton-usuario, .boton-carritocompra {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/*esta linea separa el boton de busqueda y la x de cierre*/
+.linea_vertical_buscador{
+    width: 1px; 
+    height: 1.4em;
+    background-color:#ffffff
+}
+
+/*es donde se escribe lo que se vaya a buscar*/
+.espacio_buscador {
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.espacio_buscador::placeholder {
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+/* este parte representa las opciones que aparecen al presionar categorias*/
+.overlay-categorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    z-index: 1000; 
+}
+
+.overlay-categorias ul {
+    list-style: none;
+    padding: 10;
+}
+
+.overlay-categorias li {
+    margin: 10px 0px;
+}
+
+.overlay-categorias a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/*otro estilo de botones*/
+.botonestilo2{
+    width: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background: #FFFF;
+    align-items: center;
+    font-size: 16px;
+}
+
+.botonestilo2:hover{
+    background: #F4F4F4;
+}
+
+/*apartado de la derecha donde esta el boton de inicio sesion y registratse*/
+.dr_menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: -1;
+}
+
+.boton-usuario{
+    display: flex;
+    height: 60%;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    background: #ffffff;
+    align-items: center;
+}
+
+.botoncarritocompra{
+    display: flex;
+    height: 60%;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    background: #9747FF;
+    align-items: center;
+}
+
+.overlay-opusuarios {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    z-index: 1000; 
+}
+
+.overlay-opusuarios ul {
+    list-style: none;
+}
+
+.overlay-opusuarios li {
+    margin: 10px 0px;
+}
+
+.overlay-opusuarios a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.botonestilocerrar{
+    width: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background: #ffffff;
+    align-items: center;
+    font-size: 16px;
+}
+
+.botonestilocerrar:hover a{
+    color: #ffffff;
+}
+
+.botonestilocerrar:hover{
+    background: #ee2727;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.overlay-buttons {
+    margin-top: 20px;
+}
+
+.overlay-btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cancel-button.overlay-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+#confirm-button.overlay-btn {
+    background-color: #9747FF;
+    color: white;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*espacio del centro*/
+.scroll_centro {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/*apartado donde se muestran los 3 anuncios*/
+.imagenes_anuncios {
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.apartado_anuncios {
+    display: flex;
+    width: 300%; /* Tres imágenes, cada una con ancho del 100% */
+    transition: transform 1s ease-in-out;
+}
+
+.apartado_anuncios img {
+    width: 100vw;
+    height: 100%;
+}
+
+/*estos puntos son los que permiten mirar los distintos anuncios de forma manual*/
+.puntos_navegacion {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.punto {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.punto.active {
+    background-color: #717171;
+}
+
+/*este apartado es el texto anunciando algo por ejemplo lo nuevos productos de alora*/
+.texto_anunciante {
+    display: inline-block;
+    white-space: nowrap; /* Evita saltos de línea, manteniendo el texto en una sola línea */
+    animation: deslizar 20s linear infinite; /* Aplica la animación */
+}
+
+.contenido-texto {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    overflow: hidden; /* Oculta el texto que se sale del contenedor */
+}
+
+.contenido-texto span {
+    display: inline-block;
+    padding-right: 20px; /* Espacio entre repeticiones del texto */
+    font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
+    color: #000000; /* Color del texto */
+}
+
+/*deslizamiento a la izquierda*/
+@keyframes deslizar {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/*aspeto de las lineas separadoras (son las que estan arriba y debajo del texto*/
+hr {
+    height: 2px; 
+    border: none;
+    background-color: #000000;
+}
+
+.producto_nuevos {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px; /* Espacio entre los productos */
+}
+
+.producto_nuevos::-webkit-scrollbar {
+    height: 8px; /* Altura de la barra deslizadora horizontal */
+}
+
+.producto_nuevos::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de la barra deslizadora */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.producto_nuevos::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo del track de la barra deslizadora */
+    border-radius: 10px;
+}
+
+.producto_nuevos .caja_anticulo {
+    width: 180px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px; /* Añadir padding para el borde de la imagen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Sombra inicial transparente */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave para la sombra */
+}
+
+.producto_nuevos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box; /* Incluir el borde en las dimensiones de la imagen */
+}
+
+.producto_nuevos .caja_anticulo:hover img {
+    transform: scale(1.02);
+}
+
+.producto_nuevos .caja_anticulo:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.productos {
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+}
+
+.precios {
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de todos los enlaces */
+}

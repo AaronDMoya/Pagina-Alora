@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-iniciosesion.css">
+    <title>Inicio sesion</title>
+</head>
+<body>
+    <div class="fondo-contenedor">
+        <img src="img/fondo-iniciosesion.png" alt="fondoproducto" class="fondo-producto">
+    </div>
+    <nav class="nav">
+        <div class="iz_menu">
+            <a href="index.html" class="contenedor-logo">
+                <img src="img/Logo_alora.png" alt="Logo de alora" class="logo-alora">
+            </a>
+            <button class="botonestilo1">Categorias</button>
+            <div id="overlay-categorias" class="overlay-categorias">
+                <ul>
+                    <li class="botonestilo2"><a href="">Categoría</a></li>
+                    <li class="botonestilo2"><a href="">Categoría</a></li>
+                    <li class="botonestilo2"><a href="">Categoría</a></li>
+                </ul>
+            </div>
+            <div class="buscador_productos">
+                <form class="forma_buscador">
+                    <input type="text" class="espacio_buscador" placeholder="Buscar...">
+                    <button class="buscador" type="button">
+                        <img src="img/busqueda.png" alt="Busqueda" class="buscador_img">
+                    </button>
+                    <div class="linea_vertical_buscador"></div>
+                    <button class="equis"type="button">
+                        <img src="img/cruz.png" alt="Cerrar" class="equis_img">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="contenerdor-inico-sesion">
+        <h1 class="registrar">Inicio sesion</h1>
+        <form class="datos-iniciar-sesion">
+            <p class="registrar">Correo electronico</p>
+            <input type="text" class="espacio-datos" placeholder="Introduce tu correo electronico" required>
+            <p class="registrar">Correo electronico</p>
+            <input type="text" class="espacio-datos" placeholder="Introduce tu correo electronico" required>
+            <button class="boton-iniciosesion">Iniciar sesion</button>
+        </form>
+        <p class="registrar">Todavia no tienes una cuenta? <a href="Pagina-registro.html" class="ubi-registrate">Regístrate</a></p>
+    </div>
+    <script src="js/main-iniciosesion.js"></script>
+</body>

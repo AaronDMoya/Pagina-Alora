@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-producto.css">
+    <title>Producto</title>
+</head>
+<body>
+    <div class="fondo-contenedor">
+        <img src="img/fondod_productos.png" alt="fondoproducto" class="fondo-producto">
+    </div>
+    <nav class="nav">
+        <div class="iz_menu">
+            <a href="index.html" class="contenedor-logo">
+                <img src="img/Logo_alora.png" alt="Logo de alora" class="logo-alora">
+            </a>
+            <button class="botonestilo1">Categorias</button>
+            <div id="overlay-categorias" class="overlay-categorias">
+                <ul>
+                    <li class="botonestilo2"><a href="">Categoría</a></li>
+                    <li class="botonestilo2"><a href="">Categoría</a></li>
+                    <li class="botonestilo2"><a href="">Categoría</a></li>
+                </ul>
+            </div>
+            <div class="buscador_productos">
+                <form class="forma_buscador">
+                    <input type="text" class="espacio_buscador" placeholder="Buscar...">
+                    <button class="buscador" type="button">
+                        <img src="img/busqueda.png" alt="Busqueda" class="buscador_img">
+                    </button>
+                    <div class="linea_vertical_buscador"></div>
+                    <button class="equis"type="button">
+                        <img src="img/cruz.png" alt="Cerrar" class="equis_img">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="dr_menu">
+            <a href="Pagina-iniciosesion.html">
+                <button class="botoninicios">Iniciar sesion</button>
+            </a>
+            <a href="Pagina-registro.html">
+                <button class="botonregistro">Registrarse</button>
+            </a>
+        </div>
+    </nav>
+    <div class="info_producto">
+        <div class="contenedor-imagenes-producto">
+            <div class="contenedor-imagenes">
+                <img src="img/articulo01.jpg" alt="Imagen 1" class="miniatura">
+                <img src="img/articulo02.jpg" alt="Imagen 2" class="miniatura">
+                <img src="img/articulo03.webp" alt="Imagen 3" class="miniatura">
+                <img src="img/articulo04.webp" alt="Imagen 4" class="miniatura">
+                <img src="img/articulo05.webp" alt="Imagen 5" class="miniatura">
+            </div>
+            <div class="contenedor-visualizador">
+                <img src="img/articulo01.jpg" alt="Visualizador" id="imagen-visualizador">
+            </div>
+        </div>
+        <div class="datosd_productos">
+            <h1 class="nombre_producto">Producto 01</h1>
+            <p class="precio_producto">$30,000</p>
+            <p class="descripcion_producto">Sueter negro para hombre, material poliester, Talla XXL</p>
+            <div class="botones_compra">
+                <a href="Pagina-iniciosesion.html" class="botoncompra">
+                    <button class="botoncompra">COMPRAR</button>
+                </a>
+                <a href="Pagina-iniciosesion.html" class="botoncarritocompra">
+                    <button class="botoncarritocompra">CARRITO DE COMPRA</button>
+                </a>
+            </div>
+        </div>
+    </div> 
+    <script src="js/main-producto.js"></script>
+</body>
